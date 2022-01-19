@@ -11,6 +11,10 @@ if (typeof window !== 'undefined') {
 const initialState: StateValue = {
   errors: {},
   loadings: [],
+  salads: [],
+  currentSalad: null,
+  order: [],
+  compositions: [],
 }
 
 export function reducer(state = initialState, { type, payload }: AnyAction) {
@@ -47,7 +51,33 @@ export function reducer(state = initialState, { type, payload }: AnyAction) {
       }
     }
     ///
+    case t.SET_SALADS: {
+      return {
+        ...state,
+        salads: payload
+      }
+    }
+    
+    case t.SET_CURRENT_SALAD: {
+      return {
+        ...state,
+        currentSalad: payload
+      }
+    }
 
+    case t.SET_ORDER: {
+      return {
+        ...state,
+        order: payload
+      }
+    }
+
+    case t.SET_COMPOSITIONS: {
+      return {
+        ...state,
+        compositions: payload
+      }
+    }
     ///
     default:
       return state

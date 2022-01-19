@@ -1,8 +1,24 @@
-html,
-body
-  padding: 0
+@import typography
+
+html, body
+  width: 100vw
+  height: 100vh
   margin: 0
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+
+body
+  min-height: 600px
+  min-width: 800px
+  margin: 0
+
+  overflow-x: hidden
+  overflow-y: scroll
+
+  &::-webkit-scrollbar
+    width: 0
+
+#__next
+  width: 100%
+  height: 100%
 
 a
   color: inherit
@@ -10,3 +26,142 @@ a
 
 *
   box-sizing: border-box
+
+#Modal
+  position: fixed
+  z-index: 9
+  top: 0
+  left: 0
+  width: 100%
+  height: 0
+
+
+///Select-none
+.select-none
+  user-select: none
+
+//// Scroll
+.scroll-x
+  overflow-x: auto
+
+  &::-webkit-scrollbar
+    width: 0
+
+.scroll-y
+  overflow-y: auto
+
+  &::-webkit-scrollbar
+    width: 0
+
+.overflow-hidden
+  overflow: hidden
+
+//// Margin & Padding
+.opacity-1
+  opacity: 1
+
+.text-r
+  text-align: right
+
+.p-05
+  padding: .5rem
+
+.m-05
+  margin: .5rem
+
+.mv-05
+  margin-top: .5rem
+  margin-bottom: .5rem
+
+.mt-05
+  margin-top: .5rem
+
+.mb-05
+  margin-bottom: .5rem
+
+.mh-05
+  margin-left: .5rem
+  margin-right: .5rem
+
+.ml-05
+  margin-left: .5rem
+
+.mr-05
+  margin-right: .5rem
+
+.pv-05
+  padding-top: .5rem
+  padding-bottom: .5rem
+
+.pt-05
+  padding-top: .5rem
+
+.pb-05
+  padding-bottom: .5rem
+
+.ph-05
+  padding-left: .5rem
+  padding-right: .5rem
+
+.pl-05
+  padding-left: .5rem
+
+.pr-05
+  padding-right: .5rem
+
+@for $i from 0 through 20
+  .m-#{$i}
+    margin: 1rem * $i
+
+  .p-#{$i}
+    padding: 1rem * $i
+
+  .mv-#{$i}
+    margin-top: 1rem * $i
+    margin-bottom: 1rem * $i
+
+  .pv-#{$i}
+    padding-top: 1rem * $i
+    padding-bottom: 1rem * $i
+
+  .mh-#{$i}
+    margin-left: 1rem * $i
+    margin-right: 1rem * $i
+
+  .ph-#{$i}
+    padding-left: 1rem * $i
+    padding-right: 1rem * $i
+
+  .mt-#{$i}
+    margin-top: 1rem * $i
+
+  .pt-#{$i}
+    padding-top: 1rem * $i
+
+  .mb-#{$i}
+    margin-bottom: 1rem * $i
+
+  .pb-#{$i}
+    padding-bottom: 1rem * $i
+
+  .ml-#{$i}
+    margin-left: 1rem * $i
+
+  .pl-#{$i}
+    padding-left: 1rem * $i
+
+  .mr-#{$i}
+    margin-right: 1rem * $i
+
+  .pr-#{$i}
+    padding-right: 1rem * $i
+
+.cursor-pointer
+  cursor: pointer
+
+.hover-opacity
+  &:hover
+    opacity: .5
+
+.red
+  background: red
